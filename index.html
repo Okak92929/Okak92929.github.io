@@ -1,0 +1,25 @@
+<form>
+  <p>
+    <label for="height">Введите рост в сантиметрах:</label>
+    <input type="integer" name="height" id="height" required>
+  </p>
+  <p>
+    <label for="height"> Введите вес:</label>
+    <input type="integer" name="weight" id="weight" required>
+  </p>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  
+</form>
+<button onclick = 'lol()'> type="submit">рассчитать</button>
+<div id='output'></div>
+<script>
+	function lol ()
+	{
+		const height = document.getElementById("height").value/100
+		const weight = document.getElementById('weight').value
+		const index = Math.round (weight/(height*height))
+		
+		document.getElementById('output').innerText = 'Ваш ИМТ: '+ index 
+	}
+</script>
